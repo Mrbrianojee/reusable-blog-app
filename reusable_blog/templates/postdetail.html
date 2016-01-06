@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <div>
+            {{ post.published_date }}
+        </div>
+        <h3><a href="">{{ post.title }}</a></h3>
+
+        <p>{{ post.content|linebreaks }}</p>
+
+        <p>
+            <button class="btn btn-default" onclick="location.href='/blog'">Back to Blog</button>
+            {{ post.published_date }} | Views <strong>{{ post.views }}</strong> | Tag <strong>{{ post.tag }}</strong>
+        </p>
+
+    </div>
+{% endblock content %}
